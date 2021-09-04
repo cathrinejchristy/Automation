@@ -1,0 +1,74 @@
+**********TEST NAME : COMPARE THE TRANSACTIONS IN TWO XML FILES**********
+============TEST 1 : Identify the duplicate transaction============
+
+Duplicate Transactions in Target File
+
+date :20/05/2020
+post_date :20/05/2020
+debit_credit_flag :D
+response_code :00
+description :ATM ransactions OnUs Custom Fee
+txn_reference_id :123654800674
+currency :AED
+amount :75.00
+source_currency :AED
+source_amount :75.00
+auth_code :0
+running_balance :896521
+transaction_code :0.00
+
+date :20/05/2020
+post_date :20/05/2020
+debit_credit_flag :D
+response_code :00
+description :ATM ransactions OnUs Custom Fee
+txn_reference_id :123654800674
+currency :AED
+amount :75.00
+source_currency :AED
+source_amount :75.00
+auth_code :0
+running_balance :896521
+transaction_code :0.00
+TEST RESULT : FAIL  - Duplicates transactions are identified
+============TEST 1 : Completed============
+
+============TEST 2 : Verify the transactions in both the files are matching============
+
+Non matched Transactions in Source File
+
+
+date :20/05/2020
+post_date :21/05/2020
+debit_credit_flag :D
+response_code :00
+description :Unique: Cash Custom Fee
+txn_reference_id :456565897474
+currency :AED
+amount :75.00
+source_currency :AED
+source_amount :75.00
+auth_code :0
+running_balance :123654
+transaction_code :0.00
+
+Non matched Transactions in Target File
+
+
+date :20/05/2020
+post_date :21/05/2020
+debit_credit_flag :D
+response_code :00
+description :Unique: Cash Custom Fee
+txn_reference_id :456565897474
+currency :AED
+amount :75.00
+source_currency :AED
+source_amount :79.00
+auth_code :0
+running_balance :123654
+transaction_code :0.00
+
+TEST RESULT : FAIL  - The transactions in both the files are not matched
+============TEST 2 : Completed============
+
